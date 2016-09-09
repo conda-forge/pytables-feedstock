@@ -14,7 +14,7 @@ source:
         - tables_init.patch  # [win]
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
     entry_points:
         - pt2to3 = tables.scripts.pt2to3:main
@@ -30,7 +30,7 @@ requirements:
         - numpy x.x
         - zlib 1.2.*
         - lzo 2.06  # [linux]
-        - bzip2
+        - bzip2 1.0.*
         - hdf5 1.8.17|1.8.17.*
         - numexpr
         # Building blosc is done internally.
@@ -44,7 +44,7 @@ requirements:
         - numexpr
         - hdf5 1.8.17|1.8.17.*
         - zlib 1.2.*
-        - bzip2  # [win]
+        - bzip2 1.0.*  # [win]
         # building blosc is done internally.
         # this is an old version, though.
         # would be better to link against new version externally.
