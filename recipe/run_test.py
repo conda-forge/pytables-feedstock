@@ -12,7 +12,6 @@ import tables.lrucacheextension
 import tables.tableextension
 import tables.utilsextension
 
-tables.print_versions()
 
 if sys.platform.startswith('linux'):
     lzo_ver = tables.which_lib_version("lzo")[1]
@@ -20,8 +19,6 @@ if sys.platform.startswith('linux'):
 
 
 if __name__ == "__main__":
-    # Skip tests on python 3 for windows.
-    if not (os.name == "nt" and sys.version_info[0] == 3):
-        from multiprocessing import freeze_support
-        freeze_support()
-        tables.test()
+    from multiprocessing import freeze_support
+    freeze_support()
+    tables.test()

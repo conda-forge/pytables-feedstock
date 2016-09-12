@@ -1,21 +1,16 @@
-{% set version="3.2.3.1" %}
+{% set version="3.3.0" %}
 
 package:
     name: pytables
     version: {{ version }}
 
 source:
-    fn: PyTables-v.{{ version }}.tar.gz
-    url: https://github.com/PyTables/PyTables/archive/v.{{ version }}.tar.gz
-    sha256: e422a57f0507d03c4bdbf1629b6abcd1faa83338cd2fce4747e8390d3290c556
-    patches:
-        - setup.patch
-        - win-c.patch  # [win]
-        - tables_init.patch  # [win]
+    fn: PyTables-v{{ version }}.tar.gz
+    url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
+    sha256: dceb15fef556a2775121bcc695561df4ff0e09248e0ce3a2d58f5244a9f61421
 
 build:
     number: 0
-    skip: True  # [win]
     entry_points:
         - pt2to3 = tables.scripts.pt2to3:main
         - ptdump = tables.scripts.ptdump:main
@@ -30,35 +25,33 @@ requirements:
         - numpy x.x
         - zlib 1.2.*
         - lzo 2.06  # [linux]
-        - bzip2
+        - bzip2 1.0.*
         - hdf5 1.8.17|1.8.17.*
         - numexpr
-        # Building blosc is done internally.
-        # This is an old version, though.
-        # Would be better to link against new version externally.
-        # See https://github.com/PyTables/PyTables/issues/451
+        # Building blosc is done internally. The version is up-to-date.
         # - blosc
     run:
         - python
+        - six
         - numpy x.x
         - numexpr
         - hdf5 1.8.17|1.8.17.*
         - zlib 1.2.*
-        - bzip2  # [win]
-        # building blosc is done internally.
-        # this is an old version, though.
-        # would be better to link against new version externally.
-        # See https://github.com/PyTables/PyTables/issues/451
+        - bzip2 1.0.*  # [win]
+        # building blosc is done internally. The version is up-to-date.
         # - blosc
 
 test:
+    requires:
+        - setuptools
     commands:
         - pt2to3 -h
         - ptdump -h
         - ptrepack -h
         - pttree -h
-        - conda inspect linkages -n _test pytables  # [not win]
-        - conda inspect objects -n _test pytables  # [osx]
+        # the current conda-build fails on inspect.
+        # - conda inspect linkages -n _test pytables  # [not win]
+        # - conda inspect objects -n _test pytables  # [osx]
 
 about:
     home: http://www.pytables.org
@@ -77,3 +70,4 @@ extra:
     recipe-maintainers:
         - msarahan
         - ocefpaf
+        - tomkooij
