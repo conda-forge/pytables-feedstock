@@ -25,7 +25,7 @@ requirements:
         - numpy x.x
         - zlib 1.2.*
         - lzo 2.06  # [linux]
-        - bzip2 1.0.x
+        - bzip2 1.0.*
         - hdf5 1.8.17|1.8.17.*
         - numexpr
         # Building blosc is done internally. The version is up-to-date.
@@ -37,7 +37,7 @@ requirements:
         - numexpr
         - hdf5 1.8.17|1.8.17.*
         - zlib 1.2.*
-        - bzip2 1.0.x # [win]
+        - bzip2 1.0.* # [win]
         # building blosc is done internally. The version is up-to-date.
         # - blosc
 
