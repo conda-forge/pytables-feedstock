@@ -15,6 +15,18 @@ is built on top of the HDF5 library, using the Python language and the
 NumPy package.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytables-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytables-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytables-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytables-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytables-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytables-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/version.svg)](https://anaconda.org/conda-forge/pytables)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/downloads.svg)](https://anaconda.org/conda-forge/pytables)
+
 Installing pytables
 ===================
 
@@ -70,18 +82,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytables-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytables-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytables-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytables-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytables-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytables-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/version.svg)](https://anaconda.org/conda-forge/pytables)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/downloads.svg)](https://anaconda.org/conda-forge/pytables)
 
 
 Updating pytables-feedstock
