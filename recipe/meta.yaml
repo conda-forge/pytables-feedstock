@@ -1,4 +1,4 @@
-{% set version="3.3.0" %}
+{% set version="3.4.1" %}
 
 package:
     name: pytables
@@ -7,7 +7,7 @@ package:
 source:
     fn: PyTables-v{{ version }}.tar.gz
     url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
-    sha256: dceb15fef556a2775121bcc695561df4ff0e09248e0ce3a2d58f5244a9f61421
+    sha256: 1fed6fe6f1b76b3e123bae44e37199be8e915d53ce270740f63a29a04a5db7c5
 
 build:
     number: 0
