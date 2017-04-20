@@ -45,6 +45,7 @@ requirements:
 test:
   requires:
     - setuptools
+    - mock
   commands:
     - pt2to3 -h
     - ptdump -h
