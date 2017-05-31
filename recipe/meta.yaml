@@ -10,7 +10,7 @@ source:
   sha256: 629a0227bb2b315c5d97629073696609eaee41d0fc89e03f997412613cd46d3a
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -26,7 +26,7 @@ requirements:
     - zlib 1.2.*
     - lzo 2.06  # [linux]
     - bzip2 1.0.*
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - numexpr
     # Building blosc is done internally. The version is up-to-date.
     # - blosc
@@ -35,7 +35,7 @@ requirements:
     - six
     - numpy x.x
     - numexpr
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - zlib 1.2.*
     - lzo 2.06  # [linux]
     - bzip2 1.0.*
