@@ -5,12 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: PyTables-v{{ version }}.tar.gz
   url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
   sha256: 629a0227bb2b315c5d97629073696609eaee41d0fc89e03f997412613cd46d3a
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -26,7 +25,7 @@ requirements:
     - numpy 1.9.*   # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - zlib 1.2.8
-    - lzo 2.*  # [linux]
+    - lzo 2.09  # [linux]
     - bzip2 1.0.*
     - hdf5 1.8.18|1.8.18.*
     - numexpr
@@ -41,7 +40,7 @@ requirements:
     - numexpr
     - hdf5 1.8.18|1.8.18.*
     - zlib 1.2.8
-    - lzo 2.*  # [linux]
+    - lzo >=2.09,<2.11  # [linux]
     - bzip2 1.0.*
     # building blosc is done internally. The version is up-to-date.
     # - blosc
