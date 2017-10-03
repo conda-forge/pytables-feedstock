@@ -21,11 +21,9 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy 1.8.*   # [not (win and (py35 or py36))]
-    - numpy 1.9.*   # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy 1.11.*
     - zlib 1.2.8
-    - lzo 2.09  # [linux]
+    - lzo 2.*  # [linux]
     - bzip2 1.0.*
     - hdf5 1.8.18|1.8.18.*
     - numexpr
@@ -34,13 +32,11 @@ requirements:
   run:
     - python
     - six
-    - numpy >=1.8   # [not (win and (py35 or py36))]
-    - numpy >=1.9   # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - numpy >=1.11
     - numexpr
     - hdf5 1.8.18|1.8.18.*
     - zlib 1.2.8
-    - lzo >=2.09,<2.11  # [linux]
+    - lzo 2.*  # [linux]
     - bzip2 1.0.*
     # building blosc is done internally. The version is up-to-date.
     # - blosc
