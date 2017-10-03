@@ -21,7 +21,7 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy 1.11.*
+    - numpy x.x
     - zlib 1.2.8
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
@@ -32,7 +32,7 @@ requirements:
   run:
     - python
     - six
-    - numpy >=1.11
+    - numpy x.x
     - numexpr
     - hdf5 1.8.18|1.8.18.*
     - zlib 1.2.8
