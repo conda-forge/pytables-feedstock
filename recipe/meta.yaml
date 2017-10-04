@@ -22,8 +22,8 @@ requirements:
     - setuptools
     - cython
     - numpy x.x
-    - zlib 1.2.8
-    - lzo 2.*  # [linux]
+    - zlib 1.2.*
+    - lzo 2.06  # [linux]
     - bzip2 1.0.*
     - hdf5 1.8.18|1.8.18.*
     - numexpr
@@ -35,8 +35,8 @@ requirements:
     - numpy x.x
     - numexpr
     - hdf5 1.8.18|1.8.18.*
-    - zlib 1.2.8
-    - lzo 2.*  # [linux]
+    - zlib 1.2.*
+    - lzo 2.06  # [linux]
     - bzip2 1.0.*
     # building blosc is done internally. The version is up-to-date.
     # - blosc
