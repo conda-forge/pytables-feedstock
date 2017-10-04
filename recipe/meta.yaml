@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
   sha256: 629a0227bb2b315c5d97629073696609eaee41d0fc89e03f997412613cd46d3a
+  patches:
+      - noavx2.patch
 
 build:
   number: 3
