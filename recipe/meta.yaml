@@ -11,7 +11,7 @@ source:
       - noavx2.patch
 
 build:
-  number: 5
+  number: 6
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -26,7 +26,7 @@ requirements:
     - numpy 1.8.*  # [not (win and (py35 or py36))]
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.8
+    - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
     - hdf5 1.8.18|1.8.18.*
@@ -41,7 +41,7 @@ requirements:
     - numpy >=1.11  # [win and py36]
     - numexpr
     - hdf5 1.8.18|1.8.18.*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
     # building blosc is done internally. The version is up-to-date.
@@ -56,8 +56,8 @@ test:
     - ptdump -h
     - ptrepack -h
     - pttree -h
-    - conda inspect linkages -p $PREFIX pytables  # [not win]
-    - conda inspect objects -p $PREFIX pytables  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 
 about:
