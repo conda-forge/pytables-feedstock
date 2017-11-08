@@ -11,7 +11,7 @@ source:
       - noavx2.patch
 
 build:
-  number: 6
+  number: 7
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -29,7 +29,7 @@ requirements:
     - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - numexpr
     # Building blosc is done internally. The version is up-to-date.
     # - blosc
@@ -40,7 +40,7 @@ requirements:
     - numpy >=1.9  # [win and py35]
     - numpy >=1.11  # [win and py36]
     - numexpr
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
