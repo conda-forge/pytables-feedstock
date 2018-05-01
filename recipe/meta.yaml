@@ -31,8 +31,7 @@ requirements:
     - bzip2 1.0.*
     - hdf5 1.10.1
     - numexpr
-    # Building blosc is done internally. The version is up-to-date.
-    # - blosc
+    - blosc
   run:
     - python
     - six
@@ -44,8 +43,7 @@ requirements:
     - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
-    # building blosc is done internally. The version is up-to-date.
-    # - blosc
+    - blosc
 
 test:
   requires:
