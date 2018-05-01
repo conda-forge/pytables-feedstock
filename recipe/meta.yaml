@@ -1,4 +1,4 @@
-{% set version="3.4.3" %}
+{% set version = "3.4.3" %}
 
 package:
   name: pytables
