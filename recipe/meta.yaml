@@ -1,4 +1,4 @@
-{% set version="3.4.3" %}
+{% set version = "3.4.3" %}
 
 package:
   name: pytables
@@ -11,7 +11,7 @@ source:
       - noavx2.patch
 
 build:
-  number: 7
+  number: 8
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -31,8 +31,7 @@ requirements:
     - bzip2 1.0.*
     - hdf5 1.10.1
     - numexpr
-    # Building blosc is done internally. The version is up-to-date.
-    # - blosc
+    - blosc
   run:
     - python
     - six
@@ -44,8 +43,7 @@ requirements:
     - zlib 1.2.11
     - lzo 2.*  # [linux]
     - bzip2 1.0.*
-    # building blosc is done internally. The version is up-to-date.
-    # - blosc
+    - blosc
 
 test:
   requires:
