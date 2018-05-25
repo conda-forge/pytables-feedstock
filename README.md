@@ -18,14 +18,16 @@ NumPy package.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytables-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytables-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytables-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytables-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytables-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytables-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pytables-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pytables-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pytables-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pytables-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pytables-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pytables-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/version.svg)](https://anaconda.org/conda-forge/pytables)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytables/badges/downloads.svg)](https://anaconda.org/conda-forge/pytables)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytables-green.svg)](https://anaconda.org/conda-forge/pytables) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytables.svg)](https://anaconda.org/conda-forge/pytables) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytables.svg)](https://anaconda.org/conda-forge/pytables) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytables.svg)](https://anaconda.org/conda-forge/pytables) |
 
 Installing pytables
 ===================
