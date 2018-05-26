@@ -22,8 +22,8 @@ pin_run_as_build:
   lzo:
     max_pin: x
   python:
-    max_pin: x.x
     min_pin: x.x
+    max_pin: x.x
   zlib:
     max_pin: x.x
 python:
