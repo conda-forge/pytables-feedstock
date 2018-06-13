@@ -1,4 +1,4 @@
-{% set version = "3.4.3" %}
+{% set version = "3.4.4" %}
 
 package:
   name: pytables
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
-  sha256: 02bcd382a61951d2f0a882698910a00f43f9d8cf437d5cbe3075c513dee0ef74
+  sha256: c9682c0f35d8175e12bbd38d925bdb606d47b7c8e358ba056a9dbf3b1f183114
   patches:
       - noavx2.patch
 
