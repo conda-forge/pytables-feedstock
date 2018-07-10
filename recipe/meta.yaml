@@ -20,29 +20,27 @@ build:
 
 requirements:
   build:
+    - {{ compiler("c") }}
+  host:
     - python
     - setuptools
     - cython
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
-    - hdf5 1.10.1
+    - numpy
+    - zlib
+    - lzo  # [linux]
+    - bzip2
+    - hdf5
     - numexpr
     - blosc
   run:
     - python
     - six
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - numexpr
-    - hdf5 1.10.1
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
+    - hdf5
+    - zlib
+    - lzo  # [linux]
+    - bzip2
     - blosc
 
 test:
