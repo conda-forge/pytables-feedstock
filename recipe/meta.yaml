@@ -11,7 +11,7 @@ source:
       - noavx2.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -20,29 +20,32 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
     - cython
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
-    - hdf5 1.10.1
+    - numpy        # [not (win and (py35 or py36))]
+    - numpy        # [win and py35]
+    - numpy         # [win and py36]
+    - zlib
+    - lzo      # [linux]
+    - bzip2
+    - hdf5
     - numexpr
     - blosc
   run:
     - python
     - six
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
+    - {{ pin_compatible('numpy') }}   # [win and py35]
+    - {{ pin_compatible('numpy') }}   # [win and py36]
     - numexpr
-    - hdf5 1.10.1
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
+    - hdf5
+    - zlib
+    - lzo      # [linux]
+    - bzip2
     - blosc
 
 test:
