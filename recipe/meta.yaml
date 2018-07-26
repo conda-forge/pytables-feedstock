@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/PyTables/PyTables/archive/v{{ version }}.tar.gz
-  sha256: c9682c0f35d8175e12bbd38d925bdb606d47b7c8e358ba056a9dbf3b1f183114
+  url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
+  sha256: bdc5c073712af2a43babd139c4855fc99496bb2c3f3f5d1b4770a985e6f9ce29
   patches:
       - noavx2.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -20,29 +20,28 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
-    - setuptools
+    - pip
     - cython
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
-    - hdf5 1.10.1
+    - numpy
+    - zlib
+    - lzo  # [linux]
+    - bzip2
+    - hdf5
     - numexpr
     - blosc
   run:
     - python
     - six
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - numexpr
-    - hdf5 1.10.1
-    - zlib 1.2.11
-    - lzo 2.*  # [linux]
-    - bzip2 1.0.*
+    - hdf5
+    - zlib
+    - lzo  # [linux]
+    - bzip2
     - blosc
 
 test:
@@ -54,8 +53,6 @@ test:
     - ptdump -h
     - ptrepack -h
     - pttree -h
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 
 about:
