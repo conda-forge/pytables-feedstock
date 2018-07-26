@@ -1,7 +1,7 @@
 set HDF5_DIR=%LIBRARY_PREFIX%
 set BZIP2_DIR=%LIBRARY_PREFIX%
 
-"%PYTHON%" -m pip install --no-deps --ignore-installed . ^
-                          --global-option="hdf5=%LIBRARY_PREFIX%" ^
-                          --global-option="bzip2=%LIBRARY_PREFIX%"
+%PYTHON% setup.py install --hdf5=%LIBRARY_PREFIX% ^
+                          --bzip2=%LIBRARY_PREFIX% ^
+                          --single-version-externally-managed --record record.txt
 if errorlevel 1 exit 1
