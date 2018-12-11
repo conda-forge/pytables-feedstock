@@ -11,7 +11,7 @@ source:
       - noavx2.patch
 
 build:
-  number: 1001
+  number: 1002
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
