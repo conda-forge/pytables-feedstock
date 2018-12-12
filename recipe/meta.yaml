@@ -22,6 +22,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    # If blosc is not in the build environment, PyTables setup.py will work
+    # around it by using it's own internal version of computational libraries
+    # (see c-blosc/internal-complibs). These internal libraries may not match
+    # the conda environment versions and may cause segfaults.
     - blosc
   host:
     - python
