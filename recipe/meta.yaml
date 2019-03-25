@@ -46,6 +46,7 @@ requirements:
     - lzo  # [linux]
     - bzip2
     - blosc
+    - mock
 
 test:
   requires:
