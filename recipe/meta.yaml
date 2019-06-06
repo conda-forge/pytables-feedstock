@@ -9,7 +9,7 @@ source:
   sha256: b220e32262bab320aa41d33125a7851ff898be97c0de30b456247508e2cc33c2
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
