@@ -1,4 +1,4 @@
-{% set version = "3.5.2" %}
+{% set version = "3.6.0" %}
 
 package:
   name: pytables
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
-  sha256: b220e32262bab320aa41d33125a7851ff898be97c0de30b456247508e2cc33c2
+  sha256: db3488214864fb313a611fca68bf1c9019afe4e7877be54d0e61c84416603d4d
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
