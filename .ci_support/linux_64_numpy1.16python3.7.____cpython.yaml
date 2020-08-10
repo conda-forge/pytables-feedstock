@@ -1,19 +1,29 @@
 bzip2:
 - '1'
 c_compiler:
-- vs2017
+- gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2017
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
 hdf5:
 - 1.10.6
+lzo:
+- '2'
 numpy:
-- '1.14'
+- '1.16'
 pin_run_as_build:
   bzip2:
+    max_pin: x
+  lzo:
     max_pin: x
   python:
     min_pin: x.x
@@ -22,5 +32,10 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.7.* *_cpython
+target_platform:
+- linux-64
+zip_keys:
+- - numpy
+  - python
 zlib:
 - '1.2'

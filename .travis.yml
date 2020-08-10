@@ -3,22 +3,23 @@
 
 language: generic
 
-env:
-  global:
-    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "haeSLr5WM11/Ay9Q7WZ0AxZp/smp265X0j35KOW8Y0w5Ar+tglWRjAtBccUgiL+DE0v0eADhXULQCyuxySH7zbYXbDckQiLXzfiylXYJFYrSthhEDQfWfXAXz4IwYBO+0uVKf1Vy8uwZLtMn1gt90UHte9EF36vCP4NlJWQsUGPVc6A8WgSvojdJACL0rw5zZYkfDQ/bbYTWlRRJdLy8B+rc7jLDQTHZlba7f9GMc7es8NN5w8z98+tvpWLW4TYS2POiIG4KQmgxbjYCPUjye/GoQZJz2ZtaBYW0q3WaOB1NHNQ0lObBz8G5bK0wRzMVW/5K3ROTu99KzaSiFiEA9W+jVPcr4R5rK3DQ2GtMYrgRDrQNIajypaBfAIxmjSfyy6vnohUeO4CEgG85WV0gtROgy0TRZ3pxvFZ7NL+3pd7ObbgZYUVawKiqahOPVGw280dtILuDb9ORQ5uckCNZhtF4xis75dWUxxwBcG1IUSWJh5kKGkDh0yBpCWQrzd4CKKrFB+TU+oxNsgw/K7si1ZmZDXcgB0QRHWMTv6T9xiCCCr6e4ut7sXGg5ZSIr+rrmlsq06CL4jkwiBkJOdtw29k2bGfNL9QQJJdvsVJlUrsYCfKXioAREjqmy+NPnw6kD5ZF8G0tANUbWbyfURzGR1CzNZdhH8H6a/Z3c2arSQw="
+
 
 matrix:
   include:
-    - env: CONFIG=linux_ppc64le_python3.6.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.6.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
-    - env: CONFIG=linux_ppc64le_python3.7.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.7.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
-    - env: CONFIG=linux_ppc64le_python3.8.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_numpy1.16python3.8.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+      os: linux
+      arch: ppc64le
+
+    - env: CONFIG=linux_ppc64le_numpy1.18python3.6.____73_pypy UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
 
