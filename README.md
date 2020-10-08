@@ -5,9 +5,13 @@ Home: http://www.pytables.org
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytables-feedstock/blob/master/LICENSE.txt)
 
 Summary: Brings together Python, HDF5 and NumPy to easily handle large amounts of data.
+
+Development: https://github.com/PyTables
+
+Documentation: http://www.pytables.org/
 
 PyTables is a package for managing hierarchical datasets and designed to
 efficiently and easily cope with extremely large amounts of data. PyTables
