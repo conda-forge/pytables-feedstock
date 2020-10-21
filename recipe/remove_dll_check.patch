@@ -4,8 +4,8 @@ index 5c2430a..782e085 100644
 +++ b/tables/__init__.py
 @@ -20,81 +20,6 @@ to efficiently cope with extremely large amounts of data.
  """
-
-
+ 
+ 
 -import os
 -import sys
 -
