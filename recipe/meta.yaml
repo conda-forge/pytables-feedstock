@@ -43,6 +43,7 @@ requirements:
     - hdf5
     - numexpr
     - blosc
+    - packaging
   run:
     - python
     - six
@@ -53,12 +54,11 @@ requirements:
     - lzo  # [linux]
     - bzip2
     - blosc
-    - mock
+    - packaging
 
 test:
   requires:
     - setuptools
-    - mock
   commands:
     - pt2to3 -h
     - ptdump -h
