@@ -68,7 +68,7 @@ test:
 
 about:
   home: http://www.pytables.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: Brings together Python, HDF5 and NumPy to easily handle large amounts of data.
   description: |
