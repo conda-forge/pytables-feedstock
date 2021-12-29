@@ -9,7 +9,6 @@ source:
   sha256: e92a887ad6f2a983e564a69902de4a7645c30069fc01abd353ec5da255c5e1fe
   patches:
     - do_not_copy_dlls_into_package.patch
-    - remove_dll_check.patch
 
 build:
   number: 0
