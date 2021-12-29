@@ -3,7 +3,7 @@ About pytables
 
 Home: http://www.pytables.org
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytables-feedstock/blob/master/LICENSE.txt)
 
@@ -334,6 +334,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@avalentino](https://github.com/avalentino/)
 * [@msarahan](https://github.com/msarahan/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@scopatz](https://github.com/scopatz/)
