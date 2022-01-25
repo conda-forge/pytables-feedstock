@@ -1,4 +1,4 @@
-{% set version = "3.6.1" %}
+{% set version = "3.7.0" %}
 
 package:
   name: pytables
@@ -6,13 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
-  sha256: 49a972b8a7c27a8a173aeb05f67acb45fe608b64cd8e9fa667c0962a60b71b49
+  sha256: e92a887ad6f2a983e564a69902de4a7645c30069fc01abd353ec5da255c5e1fe
   patches:
     - do_not_copy_dlls_into_package.patch
-    - remove_dll_check.patch
 
 build:
-  number: 5
+  number: 0
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -44,6 +43,7 @@ requirements:
     - hdf5
     - numexpr
     - blosc
+    - packaging
   run:
     - python
     - six
@@ -54,12 +54,11 @@ requirements:
     - lzo  # [linux]
     - bzip2
     - blosc
-    - mock
+    - packaging
 
 test:
   requires:
     - setuptools
-    - mock
   commands:
     - pt2to3 -h
     - ptdump -h
@@ -69,9 +68,9 @@ test:
 
 about:
   home: http://www.pytables.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Brings together Python, HDF5 and NumPy to easily handle large amounts of data.'
+  summary: Brings together Python, HDF5 and NumPy to easily handle large amounts of data.
   description: |
     PyTables is a package for managing hierarchical datasets and designed to
     efficiently and easily cope with extremely large amounts of data. PyTables
@@ -86,3 +85,4 @@ extra:
     - ocefpaf
     - tomkooij
     - scopatz
+    - avalentino

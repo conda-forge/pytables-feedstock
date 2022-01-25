@@ -1,17 +1,27 @@
 diff --git a/setup.py b/setup.py
-index 5020d0a..1dfca70 100755
+index ab8f8e30..b79b863e 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -817,12 +817,6 @@ if __name__ == '__main__':
+@@ -834,14 +834,14 @@ if __name__ == "__main__":
+     cython_extfiles = get_cython_extfiles(cython_extnames)
  
-     name = find_name()
- 
+     # --------------------------------------------------------------------
 -    if os.name == "nt":
--        # Add DLL's to the final package for windows
--        data_files.extend([
--            ('Lib/site-packages/%s' % name, dll_files),
--        ])
+-        for dll_file in dll_files:
+-            shutil.copy(dll_file, 'tables')
+-        dll_dir = Path('tables')
+-        dll_files = [dll_dir / Path(dll_file).name for dll_file in dll_files]
 -
+-        # Add DLL's to the final package for windows
+-        data_files.append((Path("Lib/site-packages/tables"), dll_files))
++    # if os.name == "nt":
++    #     for dll_file in dll_files:
++    #         shutil.copy(dll_file, 'tables')
++    #     dll_dir = Path('tables')
++    #     dll_files = [dll_dir / Path(dll_file).name for dll_file in dll_files]
++    #
++    #     # Add DLL's to the final package for windows
++    #     data_files.append((Path("Lib/site-packages/tables"), dll_files))
+ 
      ADDLIBS = [hdf5_package.library_name]
  
-     # List of Blosc file dependencies
