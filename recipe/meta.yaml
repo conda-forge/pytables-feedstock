@@ -11,7 +11,7 @@ source:
     - do_not_copy_dlls_into_package.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -49,11 +49,6 @@ requirements:
     - six
     - {{ pin_compatible('numpy') }}
     - numexpr
-    - hdf5
-    - zlib
-    - lzo  # [linux]
-    - bzip2
-    - blosc
     - packaging
 
 test:
