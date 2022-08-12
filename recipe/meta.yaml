@@ -49,11 +49,6 @@ requirements:
     - six
     - {{ pin_compatible('numpy') }}
     - numexpr
-    - hdf5
-    - zlib
-    - lzo  # [linux]
-    - bzip2
-    - blosc
     - packaging
 
 test:
