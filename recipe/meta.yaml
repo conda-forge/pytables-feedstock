@@ -32,6 +32,7 @@ requirements:
     # (see c-blosc/internal-complibs). These internal libraries may not match
     # the conda environment versions and may cause segfaults.
     - blosc
+    - c-blosc2
   host:
     - python
     - pip
