@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
   sha256: 34f3fa2366ce20b18f1df573a77c1d27306ce1f2a41d9f9eff621b5192ea8788
-  patches:
-    - do_not_copy_dlls_into_package.patch
 
 build:
   number: 0
@@ -43,6 +41,7 @@ requirements:
     - hdf5
     - numexpr
     - blosc
+    - c-blosc2
     - packaging
   run:
     - python
@@ -50,6 +49,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - numexpr
     - packaging
+    - py-cpuinfo
 
 test:
   requires:
