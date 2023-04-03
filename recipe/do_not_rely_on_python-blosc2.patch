@@ -1,8 +1,8 @@
 diff --git a/setup.py b/setup.py
-index 966be028..7152ad51 100755
+index 966be0286..3034cac3f 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -262,11 +262,9 @@ if __name__ == "__main__":
+@@ -262,11 +262,9 @@ def run(self):
  
      debug = "--debug" in sys.argv
  
@@ -16,21 +16,23 @@ index 966be028..7152ad51 100755
      optional_libs = []
      copy_libs = []
  
-@@ -274,6 +272,13 @@ if __name__ == "__main__":
+@@ -274,6 +272,15 @@ def run(self):
      default_library_dirs = None
      default_runtime_dirs = None
  
-+    try:
-+        blosc2_inc, blosc2_lib = get_blosc2_directories()
-+        lib_dirs.append(blosc2_lib)
-+        inc_dirs.append(blosc2_inc)
-+    except EnvironmentError:
-+        blosc2_inc = blosc2_lib = None
++    blosc2_inc = blosc2_lib = None
++    if os.environ.get("PYTABLES_NO_BLOSC2_WHEEL", None) is None:
++        try:
++            blosc2_inc, blosc2_lib = get_blosc2_directories()
++            lib_dirs.append(blosc2_lib)
++            inc_dirs.append(blosc2_inc)
++        except EnvironmentError:
++            pass
 +
      if os.name == "posix":
          prefixes = ("/usr/local", "/sw", "/opt", "/opt/local", "/usr", "/")
          prefix_paths = [Path(x) for x in prefixes]
-@@ -691,7 +696,7 @@ if __name__ == "__main__":
+@@ -691,7 +698,7 @@ def find_runtime_path(self, locations=default_runtime_dirs):
      # Try to locate the compulsory and optional libraries.
      lzo2_enabled = False
      compiler = new_compiler()
