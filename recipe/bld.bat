@@ -1,5 +1,6 @@
 set HDF5_DIR=%LIBRARY_PREFIX%
 set BZIP2_DIR=%LIBRARY_PREFIX%
+set COPY_DLLS=FALSE
 
 del /F /Q .\tables\*.c
 
