@@ -11,7 +11,7 @@ source:
     - do_not_rely_on_python-blosc2.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -44,19 +44,23 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - cython
     - numexpr
+    - blosc
+    - c-blosc2
     - packaging
     - py-cpuinfo
 
 test:
   requires:
     - setuptools
+    - pip
   commands:
     - pt2to3 -h
     - ptdump -h
     - ptrepack -h
     - pttree -h
-
+    - pip check
 
 about:
   home: http://www.pytables.org
