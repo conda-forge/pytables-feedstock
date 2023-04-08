@@ -46,8 +46,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - cython
     - numexpr
-    - blosc
-    - c-blosc2
+    - python-blosc
     - packaging
     - py-cpuinfo
 
