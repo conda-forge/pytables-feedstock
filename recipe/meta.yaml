@@ -9,7 +9,6 @@ source:
   sha256: 48331503cd509c9f1f95cf2f5c64a57c48c0aa5141423f0eca352965c4f9bf81
   patches:
     - do_not_rely_on_python-blosc2.patch
-    - requirements.patch
 
 build:
   number: 0
