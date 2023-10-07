@@ -1,4 +1,4 @@
-{% set version = "3.8.0" %}
+{% set version = "3.9.1" %}
 
 package:
   name: pytables
@@ -6,19 +6,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
-  sha256: 34f3fa2366ce20b18f1df573a77c1d27306ce1f2a41d9f9eff621b5192ea8788
+  sha256: 48331503cd509c9f1f95cf2f5c64a57c48c0aa5141423f0eca352965c4f9bf81
   patches:
     - do_not_rely_on_python-blosc2.patch
-    - requirements.patch
 
 build:
-  number: 4
+  number: 0
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
     - ptrepack = tables.scripts.ptrepack:main
     - pttree = tables.scripts.pttree:main
-  skip: true  # [py<35]
+  skip: true  # [py<39]
 
 requirements:
   build:

@@ -1,43 +1,20 @@
-diff --git a/setup.py b/setup.py
-index 966be0286..3034cac3f 100755
---- a/setup.py
-+++ b/setup.py
-@@ -262,11 +262,9 @@ def run(self):
+--- a/pyproject.toml	2023-10-07 09:50:18.767805660 +0200
++++ b/pyproject.toml	2023-10-07 09:51:15.615432551 +0200
+@@ -12,7 +12,7 @@
+     # Included here for seamless wheel builds.
+     # Packagers can choose to replace it by externally provided
+     # c-blosc2 library and headers
+-    "blosc2 >=2.2.8",
++    # "blosc2 >=2.2.8",
+ ]
+ build-backend = "setuptools.build_meta"
+ # build-backend = "mesonpy"  # and replace ``setuptools`` above
+@@ -72,7 +72,7 @@
+     "numexpr >= 2.6.2",
+     "packaging",
+     "py-cpuinfo",
+-    "blosc2 >= 2.2.8",
++    # "blosc2 >= 2.2.8",
+ ]
  
-     debug = "--debug" in sys.argv
  
--    blosc2_inc, blosc2_lib = get_blosc2_directories()
--
-     # Global variables
--    lib_dirs = [blosc2_lib]
--    inc_dirs = [Path("hdf5-blosc/src"), Path("hdf5-blosc2/src"), blosc2_inc]
-+    lib_dirs = []
-+    inc_dirs = [Path("hdf5-blosc/src"), Path("hdf5-blosc2/src")]
-     optional_libs = []
-     copy_libs = []
- 
-@@ -274,6 +272,15 @@ def run(self):
-     default_library_dirs = None
-     default_runtime_dirs = None
- 
-+    blosc2_inc = blosc2_lib = None
-+    if os.environ.get("PYTABLES_NO_BLOSC2_WHEEL", None) is None:
-+        try:
-+            blosc2_inc, blosc2_lib = get_blosc2_directories()
-+            lib_dirs.append(blosc2_lib)
-+            inc_dirs.append(blosc2_inc)
-+        except EnvironmentError:
-+            pass
-+
-     if os.name == "posix":
-         prefixes = ("/usr/local", "/sw", "/opt", "/opt/local", "/usr", "/")
-         prefix_paths = [Path(x) for x in prefixes]
-@@ -691,7 +698,7 @@ def find_runtime_path(self, locations=default_runtime_dirs):
-     # Try to locate the compulsory and optional libraries.
-     lzo2_enabled = False
-     compiler = new_compiler()
--    if not BLOSC2_DIR:
-+    if not BLOSC2_DIR and blosc2_inc is not None:
-         # Inject the blosc2 directory as detected
-         BLOSC2_DIR = os.path.dirname(blosc2_inc)
-     for (package, location) in [
