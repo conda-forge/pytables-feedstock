@@ -1,4 +1,4 @@
-{% set version = "3.9.1" %}
+{% set version = "3.9.2" %}
 
 package:
   name: pytables
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
-  sha256: 48331503cd509c9f1f95cf2f5c64a57c48c0aa5141423f0eca352965c4f9bf81
+  sha256: d470263c2e50c4b7c8635a0d99ac1ff2f9e704c24d71e5fa33c4529e7d0ad9c3
   patches:
     - do_not_rely_on_python-blosc2.patch
 
@@ -57,7 +57,13 @@ test:
     - ptdump -h
     - ptrepack -h
     - pttree -h
-    - pip check
+    # This recipe applies a patch at build time to remove the `blosc2` Python
+    # package from the list of dependencies (in pyproject.toml), because the
+    # conda package for PyTables directly uses the c-blosc2 library.
+    # Apparently `pip check` uses the original `pyproject.toml` and, of course,
+    # detects the missing blosc2 (python package).
+    # See also https://github.com/conda-forge/pytables-feedstock/pull/94
+    # - pip check
 
 about:
   home: http://www.pytables.org
