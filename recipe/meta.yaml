@@ -57,13 +57,6 @@ test:
     - ptdump -h
     - ptrepack -h
     - pttree -h
-    # This recipe applies a patch at build time to remove the `blosc2` Python
-    # package from the list of dependencies (in pyproject.toml), because the
-    # conda package for PyTables directly uses the c-blosc2 library.
-    # Apparently `pip check` uses the original `pyproject.toml` and, of course,
-    # detects the missing blosc2 (python package).
-    # See also https://github.com/conda-forge/pytables-feedstock/pull/94
-    # - pip check
 
 about:
   home: http://www.pytables.org
