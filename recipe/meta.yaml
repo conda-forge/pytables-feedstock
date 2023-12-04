@@ -57,6 +57,7 @@ test:
     - ptdump -h
     - ptrepack -h
     - pttree -h
+    - pip check
 
 about:
   home: http://www.pytables.org
