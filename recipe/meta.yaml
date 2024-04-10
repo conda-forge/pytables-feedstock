@@ -38,7 +38,7 @@ requirements:
     - hdf5
     - numexpr
     - blosc
-    - c-blosc2 >= 2.14.4
+    - c-blosc2 >=2.14.4
     - packaging
     - py-cpuinfo
   run:
