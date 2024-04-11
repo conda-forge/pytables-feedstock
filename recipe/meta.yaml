@@ -11,7 +11,7 @@ source:
     - do_not_rely_on_python-blosc2.patch
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -38,7 +38,7 @@ requirements:
     - hdf5
     - numexpr
     - blosc
-    - c-blosc2
+    - c-blosc2 >=2.14.4
     - packaging
     - py-cpuinfo
   run:
