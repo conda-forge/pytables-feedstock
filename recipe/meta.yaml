@@ -11,7 +11,7 @@ source:
     - do_not_rely_on_python-blosc2.patch
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -26,6 +26,7 @@ requirements:
     - cython 0                               # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
