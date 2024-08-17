@@ -1,6 +1,8 @@
---- tables-3.10.0.orig/pyproject.toml	2024-08-13 09:41:27.000000000 +0200
-+++ tables-3.10.0/pyproject.toml	2024-08-14 11:25:31.421290349 +0200
-@@ -12,7 +12,7 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 64ada517..d626fc48 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -16,7 +16,7 @@ requires = [
      # Included here for seamless wheel builds.
      # Packagers can choose to replace it by externally provided
      # c-blosc2 library and headers
@@ -9,7 +11,7 @@
      "typing-extensions >= 4.4.0",
  ]
  build-backend = "setuptools.build_meta"
-@@ -72,7 +72,7 @@
+@@ -78,7 +78,7 @@ dependencies = [
      "numexpr >= 2.6.2",
      "packaging",
      "py-cpuinfo",
