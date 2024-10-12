@@ -30,6 +30,7 @@ requirements:
     - {{ compiler("cxx") }}
   host:
     - python
+    - setuptools
     - pip
     - cython >=0.29.32
     - numpy
