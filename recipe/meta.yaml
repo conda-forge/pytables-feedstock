@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/tables/tables-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/tables/tables-{{ version }}.tar.gz
   sha256: 4aa07ac734b9c037baeaf44aec64ec902ad247f57811b59f30c4e31d31f126cf
   patches:
     - do_not_rely_on_python-blosc2.patch
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
