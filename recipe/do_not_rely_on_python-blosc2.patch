@@ -1,5 +1,5 @@
 diff --git a/pyproject.toml b/pyproject.toml
-index 64ada517..d626fc48 100644
+index 34283978..32ea3bb5 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -16,7 +16,7 @@ requires = [
@@ -8,10 +8,10 @@ index 64ada517..d626fc48 100644
      # c-blosc2 library and headers
 -    "blosc2 >= 2.3.0",
 +    # "blosc2 >= 2.3.0",
-     "typing-extensions >= 4.4.0",
  ]
  build-backend = "setuptools.build_meta"
-@@ -78,7 +78,7 @@ dependencies = [
+ # build-backend = "mesonpy"  # and replace ``setuptools`` above
+@@ -75,7 +75,7 @@ dependencies = [
      "numexpr >= 2.6.2",
      "packaging",
      "py-cpuinfo",
