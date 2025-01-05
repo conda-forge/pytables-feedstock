@@ -17,7 +17,7 @@ build:
     - ptdump = tables.scripts.ptdump:main
     - ptrepack = tables.scripts.ptrepack:main
     - pttree = tables.scripts.pttree:main
-  skip: true  # [py<310]
+  skip: true  # [py<311]
 
 requirements:
   build:
