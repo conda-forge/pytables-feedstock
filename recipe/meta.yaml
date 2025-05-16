@@ -11,7 +11,7 @@ source:
     - do_not_rely_on_python-blosc2.patch
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
@@ -38,6 +38,9 @@ requirements:
     - bzip2
     - c-blosc2 >=2.14.4
     - hdf5
+    # Ensure that we build with nompi variant
+    # it provides downstream packages with the most flexibility
+    - hdf5 =*=nompi*
     - zlib
   run:
     - python
