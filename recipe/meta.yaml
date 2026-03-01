@@ -1,4 +1,4 @@
-{% set version = "3.11.0" %}
+{% set version = "3.11.1" %}
 
 package:
   name: pytables
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tables/tables-{{ version }}.tar.gz
-  sha256: 0e3d0f30f944b32df74cb942153e5af085a4b1709018637cdd93624e22e30fa5
+  sha256: 78abcf413091bc7c1e4e8c10fbbb438d1ac0b5a87436c5b972c3e8253871b6fb
   patches:
     - do_not_rely_on_python-blosc2.patch
 
