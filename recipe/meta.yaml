@@ -11,6 +11,8 @@ source:
     - do_not_rely_on_python-blosc2.patch
 
 build:
+  script_env:
+    - CFLAGS=-DBLOSC2_MAX_DIM=8
   number: 2
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
