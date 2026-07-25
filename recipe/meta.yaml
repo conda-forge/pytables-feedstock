@@ -13,7 +13,7 @@ source:
 build:
   script_env:
     - CFLAGS=-DBLOSC2_MAX_DIM=8
-  number: 4
+  number: 5
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
