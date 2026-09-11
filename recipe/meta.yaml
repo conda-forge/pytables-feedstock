@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/tables/tables-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/t/tables/tables-{{ version }}.tar.gz
   sha256: 78abcf413091bc7c1e4e8c10fbbb438d1ac0b5a87436c5b972c3e8253871b6fb
   patches:
     - do_not_rely_on_python-blosc2.patch
@@ -13,7 +13,7 @@ source:
 build:
   script_env:
     - CFLAGS=-DBLOSC2_MAX_DIM=8
-  number: 5
+  number: 6
   entry_points:
     - pt2to3 = tables.scripts.pt2to3:main
     - ptdump = tables.scripts.ptdump:main
